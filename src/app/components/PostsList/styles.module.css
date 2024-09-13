@@ -1,0 +1,8 @@
+.postListWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  width: var(--max-width);
+  margin: 0 auto;
+  gap: 30px;
+}

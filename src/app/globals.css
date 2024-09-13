@@ -1,16 +1,18 @@
 :root {
-  --max-width: 1100px;
-  --border-radius: 12px;
+  --max-width: 900px;
+  --border-radius: 10px;
   --font-mono: "Nunito", sans-serif;
 
-    /* Colors */
-    --light-gray100: #E7EDF4;
+  /* Colors */
+  --light-gray100: #E7EDF4;
 
-    --dark-gray900: #071422;
-    --dark-gray800: #0B1B2B;
+  --dark-gray900: #071422;
+  --dark-gray800: #0B1B2B;
 
-    --accent-blue: #3294F8;
-    --light-blue100: #AFC2D4;
+  --accent-blue: #3294F8;
+  --light-blue100: #AFC2D4;
+
+
 }
 
 
