@@ -5,10 +5,23 @@
   height: 100%;
 } 
 
+.cardHeader {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  gap: 10px;
+}
+
 .cardTitle {
   font-size: 1.375rem;
   color: var(--white);
-  margin-bottom: 16px;
+  
+}
+
+.cardDate {
+  flex: none;
+  font-weight: 200;
 }
 
 .cardBody {

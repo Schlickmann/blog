@@ -1,3 +1,4 @@
+import { Markdown } from "../Markdown";
 import styles from "./styles.module.css";
 import { formatDistanceToNow } from "date-fns";
 
@@ -20,13 +21,19 @@ interface PostProps {
 export function PostCard({ post }: PostProps) {
   return (
     <div className={styles.cardWrapper}>
-      <h2 className={styles.cardTitle}>{post.title}</h2>
-      <span>
-        {formatDistanceToNow(new Date(post.createdAt), {
-          addSuffix: true,
-        })}
-      </span>
-      <p className={styles.cardBody}>{post.body}</p>
+      <div className={styles.cardHeader}>
+        <h2 className={styles.cardTitle}>{post.title}</h2>
+        <span className={styles.cardDate}>
+          {formatDistanceToNow(new Date(post.createdAt), {
+            addSuffix: true,
+          })}
+        </span>
+      </div>
+      <div className={styles.cardBody}>
+        <Markdown skipHtml={true} disallowedElements={["h2"]}>
+          {post.body}
+        </Markdown>
+      </div>
     </div>
   );
 }

@@ -53,9 +53,7 @@ export async function PostsList() {
   return (
     <div className={styles.postListWrapper}>
       {posts.map((post) => (
-        <div key={post.id}>
-          <PostCard post={post} />
-        </div>
+        <PostCard post={post} key={post.id} />
       ))}
     </div>
   );
