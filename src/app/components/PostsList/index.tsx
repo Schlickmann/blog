@@ -1,6 +1,7 @@
 import { fetchWithBaseURL } from "@/app/utils/fetchWithBaseURL";
 import { Post, PostCard } from "../PostCard";
 import styles from "./styles.module.css";
+import Link from "next/link";
 
 // Next.js will invalidate the cache when a
 // request comes in, at most once every 1h.
@@ -32,6 +33,7 @@ async function getPosts({
     total: posts.total_count,
     items: posts.items.map((post: any) => ({
       id: post.id,
+      number: post.number,
       title: post.title,
       body: post.body,
       url: post.html_url,
@@ -53,7 +55,9 @@ export async function PostsList() {
   return (
     <div className={styles.postListWrapper}>
       {posts.map((post) => (
-        <PostCard post={post} key={post.id} />
+        <Link href={`/post/${post.number}`} key={post.number}>
+          <PostCard post={post} />
+        </Link>
       ))}
     </div>
   );

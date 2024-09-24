@@ -4,6 +4,7 @@ import { formatDistanceToNow } from "date-fns";
 
 export interface Post {
   id: number;
+  number: number;
   title: string;
   body: string;
   url: string;

@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import styles from "./page.module.css";
-import { BioInfo } from "./components/BioInfo";
-import { PostsList } from "./components/PostsList";
+import { BioInfo } from "../../components/BioInfo";
+import { PostsList } from "../../components/PostsList";
 
-export default function Home() {
+export default function PostPage() {
   return (
     <main className={styles.main}>
       <BioInfo />
