@@ -6,7 +6,7 @@ import { PostsList } from "../../components/PostsList";
 export default function PostPage() {
   return (
     <main className={styles.main}>
-      <BioInfo />
+      {/* <BioInfo /> */}
       <PostsList />
     </main>
   );

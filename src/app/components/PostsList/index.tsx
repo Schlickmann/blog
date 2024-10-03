@@ -1,7 +1,12 @@
-import { fetchWithBaseURL } from "@/app/utils/fetchWithBaseURL";
-import { Post, PostCard } from "../PostCard";
-import styles from "./styles.module.css";
+import dynamic from "next/dynamic";
 import Link from "next/link";
+
+import { fetchWithBaseURL } from "@/app/utils/fetchWithBaseURL";
+import { Post } from "../PostCard";
+import styles from "./styles.module.css";
+// import { Input, Label, TextField } from "react-aria-components";
+
+const PostCard = dynamic(() => import("../PostCard"), { ssr: false });
 
 // Next.js will invalidate the cache when a
 // request comes in, at most once every 1h.
@@ -52,13 +57,23 @@ export async function PostsList() {
   });
   let posts = response.items;
 
+  if (posts.length === 0) {
+    return <div>No posts found</div>;
+  }
+
   return (
-    <div className={styles.postListWrapper}>
-      {posts.map((post) => (
-        <Link href={`/post/${post.number}`} key={post.number}>
-          <PostCard post={post} />
-        </Link>
-      ))}
+    <div>
+      {/* <TextField>
+        <Label>First name</Label>
+        <Input />
+      </TextField> */}
+      <div className={styles.postListWrapper}>
+        {posts.map((post) => (
+          <Link href={`/post/${post.number}`} key={post.number}>
+            <PostCard post={post} />
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }

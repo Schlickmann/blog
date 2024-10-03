@@ -38,3 +38,5 @@ export function PostCard({ post }: PostProps) {
     </div>
   );
 }
+
+export default PostCard;
