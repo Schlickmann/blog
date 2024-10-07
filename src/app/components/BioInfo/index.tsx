@@ -1,18 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-import { cache } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaBuilding, FaExternalLinkAlt } from "react-icons/fa";
 import { MdPeopleAlt } from "react-icons/md";
-
-import { fetchWithBaseURL } from "@/app/utils/fetchWithBaseURL";
 import styles from "./styles.module.css";
-
-const getUserInfo = cache(async (user: string) => {
-  let data = await fetchWithBaseURL(`users/${user}`);
-
-  return await data.json();
-});
+import { getUserInfo } from "@/app/actions/getUserInfo";
 
 export async function BioInfo() {
   let me = await getUserInfo("schlickmann");

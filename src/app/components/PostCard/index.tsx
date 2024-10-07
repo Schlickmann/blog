@@ -31,7 +31,7 @@ export function PostCard({ post }: PostProps) {
         </span>
       </div>
       <div className={styles.cardBody}>
-        <Markdown skipHtml={true} disallowedElements={["h2"]}>
+        <Markdown skipHtml={true} disallowedElements={["h2", "a"]}>
           {post.body}
         </Markdown>
       </div>
