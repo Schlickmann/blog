@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";
 
-const nunito = Nunito({ subsets: ["latin"] });
+const nunito = Nunito({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "Blog 🤖",
@@ -16,8 +16,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={nunito.className}>
+    <html lang="en" className={nunito.className}>
+      <body>
         <img src="/Cover.svg" alt="" className="cover" />
         {children}
       </body>
