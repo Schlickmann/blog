@@ -1,4 +1,6 @@
 import RMarkdown from "react-markdown";
+import styles from "./styles.module.css";
+import "github-markdown-css";
 
 export function Markdown({
   children,
@@ -14,6 +16,7 @@ export function Markdown({
       disallowedElements={disallowedElements}
       unwrapDisallowed={true}
       skipHtml={skipHtml}
+      className={`markdown-body ${styles.markdown}`}
     >
       {children}
     </RMarkdown>

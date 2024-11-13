@@ -29,7 +29,7 @@ export default function PostPage() {
 
   return (
     <main className={styles.main}>
-      <Markdown>{post.body}</Markdown>
+      <Markdown disallowedElements={["figcaption"]}>{post.body}</Markdown>
     </main>
   );
 }
