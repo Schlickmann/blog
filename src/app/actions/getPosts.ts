@@ -30,13 +30,13 @@ export async function getPosts({
 
   return {
     total: posts.total_count,
-    items: posts.items.map((post: any) => ({
+    items: posts.items.map((post: Post) => ({
       id: post.id,
       number: post.number,
       title: post.title,
       body: post.body,
-      url: post.html_url,
-      createdAt: post.created_at,
+      html_url: post.html_url,
+      created_at: post.created_at,
       labels: post.labels.map((label: any) => ({
         name: label.name,
         color: label.color,

@@ -8,11 +8,16 @@ export interface Post {
   title: string;
   body: string;
   url: string;
-  createdAt: string;
+  html_url: string;
+  created_at: string;
+  comments: number;
   labels: {
     name: string;
     color: string;
   }[];
+  user: {
+    login: string;
+  };
 }
 
 interface PostProps {
@@ -25,7 +30,7 @@ export function PostCard({ post }: PostProps) {
       <div className={styles.cardHeader}>
         <h2 className={styles.cardTitle}>{post.title}</h2>
         <span className={styles.cardDate}>
-          {formatDistanceToNow(new Date(post.createdAt), {
+          {formatDistanceToNow(new Date(post.created_at), {
             addSuffix: true,
           })}
         </span>

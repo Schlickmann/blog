@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-page-custom-font */
+/* eslint-disable @next/next/no-img-element */
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";

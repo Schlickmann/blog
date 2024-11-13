@@ -3,3 +3,52 @@
   width: var(--max-width);
   margin: 0 auto;
 }
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.headerContainer {
+  width: var(--max-width);
+  background: var(--dark-gray800);
+  padding: 30px;
+  margin: 0 auto;
+  transform: translateY(-50%);
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.linksWrapper {
+  display: flex;
+  justify-content: space-between;;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+  color: var(--accent-blue);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.extraInfoWrapper {
+  display: flex;
+  gap: 24px;
+  color: var(--light-blue100);
+
+}
+
+.extraInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

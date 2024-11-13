@@ -1,6 +1,6 @@
 import RMarkdown from "react-markdown";
-import styles from "./styles.module.css";
 import "github-markdown-css";
+import styles from "./styles.module.css";
 
 export function Markdown({
   children,
